@@ -100,6 +100,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "WebSite",
           name: "atqi.dev",
           url: "https://atqi.dev",
+          author: {
+            "@type": "Person",
+            name: "Aleksandr Teymurazov",
+            url: "https://alextnow.com",
+            sameAs: ["https://alextnow.com", "https://linkedin.com/in/ateymurazov"],
+          },
         }),
       },
     ],
