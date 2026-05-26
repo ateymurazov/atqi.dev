@@ -65,7 +65,7 @@ export function SubscribeForm({
       )}
       {!message && (
         <p className="mt-3 text-xs text-muted-foreground">
-          Engineering stories from the field. No spam, unsubscribe anytime.
+          Engineering articles in your inbox. No spam. Leave anytime.
         </p>
       )}
     </form>

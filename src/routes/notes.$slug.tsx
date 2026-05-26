@@ -12,12 +12,12 @@ export const Route = createFileRoute("/notes/$slug")({
   head: ({ loaderData }) => {
     const post = loaderData?.post;
     if (!post) {
-      return { meta: [{ title: "Note not found — atqi.dev" }] };
+      return { meta: [{ title: "Note not found | atqi.dev" }] };
     }
     const url = `https://atqi.dev/notes/${post.slug}`;
     return {
       meta: [
-        { title: `${post.title} — atqi.dev` },
+        { title: `${post.title} | atqi.dev` },
         { name: "description", content: post.dek },
         { property: "og:type", content: "article" },
         { property: "og:title", content: post.title },

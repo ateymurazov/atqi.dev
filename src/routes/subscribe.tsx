@@ -6,16 +6,16 @@ export const Route = createFileRoute("/subscribe")({
   component: SubscribePage,
   head: () => ({
     meta: [
-      { title: "Subscribe — atqi.dev" },
+      { title: "Subscribe | atqi.dev" },
       {
         name: "description",
         content:
-          "Subscribe to atqi.dev — short, useful engineering stories from Aleksandr Teymurazov, every couple of weeks.",
+          "Subscribe to atqi.dev for short engineering articles by Aleksandr Teymurazov, every couple of weeks.",
       },
-      { property: "og:title", content: "Subscribe — atqi.dev" },
+      { property: "og:title", content: "Subscribe | atqi.dev" },
       {
         property: "og:description",
-        content: "Engineering stories from the field. One short note every couple of weeks.",
+        content: "Engineering articles from my own experience. One short read every couple of weeks.",
       },
       { property: "og:url", content: "https://atqi.dev/subscribe" },
     ],
@@ -34,15 +34,15 @@ function SubscribePage() {
           </span>
         </div>
         <h1 className="font-display mt-6 text-[clamp(2.25rem,5.5vw,4rem)] font-extrabold leading-[0.98] text-foreground">
-          Engineering stories,{" "}
+          Engineering stories{" "}
           <span className="font-serif-italic" style={{ color: "var(--brand-orange)" }}>
-            from the field
+            from my own work
           </span>
           <span className="text-foreground">.</span>
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-          One short essay every couple of weeks — quality systems, AI-driven delivery,
-          and what actually happens inside engineering orgs. Written by{" "}
+          One short article every couple of weeks. Quality systems, AI driven delivery,
+          and the messy reality of running a software team. Written by{" "}
           <a
             href="https://alextnow.com"
             className="text-foreground underline underline-offset-4 hover:text-[color:var(--brand-orange)]"
@@ -60,7 +60,7 @@ function SubscribePage() {
           {[
             { k: "Cadence", v: "Every 2 weeks" },
             { k: "Length", v: "5 min read" },
-            { k: "Spam", v: "Never. Unsubscribe anytime." },
+            { k: "Spam", v: "Never. Leave anytime." },
           ].map((item) => (
             <li
               key={item.k}
