@@ -2,6 +2,16 @@ import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "atqi.dev" },
+      { name: "description", content: "atqi.dev — personal site." },
+      { property: "og:title", content: "atqi.dev" },
+      { property: "og:description", content: "atqi.dev — personal site." },
+      { property: "og:url", content: "https://atqi.dev/" },
+    ],
+    links: [{ rel: "canonical", href: "https://atqi.dev/" }],
+  }),
 });
 
 // IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
