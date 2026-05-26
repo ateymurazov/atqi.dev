@@ -73,7 +73,7 @@ function Hero() {
 function PostsSection() {
   return (
     <section className="border-t border-border/70 pt-10">
-      <p className="font-mono-label text-muted-foreground">Latest notes</p>
+      <h2 className="font-mono-label text-muted-foreground">Latest notes</h2>
       <ul className="mt-6 divide-y divide-border/70 border-y border-border/70">
         {posts.map((post) => (
           <li key={post.slug}>
