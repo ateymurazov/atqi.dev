@@ -17,10 +17,12 @@ function TopBar() {
   return (
     <header className="flex items-center justify-between">
       <Link to="/" className="flex items-center gap-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-foreground text-background">
-          <span className="font-display text-sm font-bold tracking-tight">at</span>
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground text-background">
+          <span className="font-display text-base font-extrabold tracking-tight">AT</span>
         </div>
-        <span className="font-mono-label text-muted-foreground">atqi.dev</span>
+        <span className="font-mono-label text-muted-foreground">
+          Journal / 2026
+        </span>
       </Link>
       <nav className="flex items-center gap-5">
         <Link
