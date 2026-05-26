@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
 import { SubscribeForm } from "@/components/SubscribeForm";
-import { getPost, parentLink, posts, ALEXTNOW_URL } from "@/lib/posts";
+import { getPost, parentLink, posts, ALEXTNOW_URL, type Post } from "@/lib/posts";
 
 export const Route = createFileRoute("/notes/$slug")({
   loader: ({ params }) => {
@@ -68,7 +68,7 @@ export const Route = createFileRoute("/notes/$slug")({
 });
 
 function NotePage() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: Post };
   const idx = posts.findIndex((p) => p.slug === post.slug);
   const next = posts[(idx + 1) % posts.length];
 
