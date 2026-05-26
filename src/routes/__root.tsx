@@ -72,29 +72,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "atqi.dev — Aleksandr Teymurazov's engineering journal" },
-      {
-        name: "description",
-        content:
-          "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. Companion journal to alextnow.com.",
-      },
-      {
-        property: "og:title",
-        content: "atqi.dev — Aleksandr Teymurazov's engineering journal",
-      },
-      {
-        property: "og:description",
-        content:
-          "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams.",
-      },
+      { title: "atqi.dev Aleksandr Teymurazov" },
+      { name: "description", content: "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. Companion journal to alextnow.com." },
+      { property: "og:title", content: "atqi.dev Aleksandr Teymurazov" },
+      { property: "og:description", content: "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. Companion journal to alextnow.com." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "atqi.dev" },
-      { property: "og:image", content: "https://atqi.dev/og-image.jpg" },
-      { property: "og:image:width", content: "1216" },
-      { property: "og:image:height", content: "640" },
-      { property: "og:image:alt", content: "atqi.dev — Aleksandr Teymurazov's engineering journal" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://atqi.dev/og-image.jpg" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "atqi.dev Aleksandr Teymurazov" },
+      { name: "twitter:description", content: "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. Companion journal to alextnow.com." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Vlc2BepNpVXkZA9Ha7mAhgT3Bk03/social-images/social-1779824047681-AT_monogram.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Vlc2BepNpVXkZA9Ha7mAhgT3Bk03/social-images/social-1779824047681-AT_monogram.webp" },
     ],
     links: [
       {
