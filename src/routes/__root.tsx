@@ -89,7 +89,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "atqi.dev" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:image", content: "https://atqi.dev/og-image.jpg" },
+      { property: "og:image:width", content: "1216" },
+      { property: "og:image:height", content: "640" },
+      { property: "og:image:alt", content: "atqi.dev — Aleksandr Teymurazov's engineering journal" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://atqi.dev/og-image.jpg" },
     ],
     links: [
       {
