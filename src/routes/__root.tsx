@@ -72,10 +72,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "atqi.dev" },
-      { name: "description", content: "atqi.dev | personal site." },
-      { property: "og:title", content: "atqi.dev" },
-      { property: "og:description", content: "atqi.dev | personal site." },
+      { title: "atqi.dev — Aleksandr Teymurazov's engineering journal" },
+      {
+        name: "description",
+        content:
+          "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. Companion journal to alextnow.com.",
+      },
+      {
+        property: "og:title",
+        content: "atqi.dev — Aleksandr Teymurazov's engineering journal",
+      },
+      {
+        property: "og:description",
+        content:
+          "Engineering articles by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "atqi.dev" },
       { name: "twitter:card", content: "summary" },
