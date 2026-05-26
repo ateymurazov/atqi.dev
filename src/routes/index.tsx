@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { posts } from "@/lib/posts";
+import frameworkImg from "@/assets/atqi-framework.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -22,7 +23,9 @@ function Index() {
   return (
     <SiteShell>
       <Hero />
+      <WorkInProgressNotice />
       <PostsSection />
+      <FrameworkSection />
       <SubscribeSection />
     </SiteShell>
   );
@@ -103,6 +106,70 @@ function PostsSection() {
           </li>
         ))}
       </ul>
+    </section>
+  );
+}
+
+function WorkInProgressNotice() {
+  return (
+    <aside
+      role="note"
+      className="mt-10 flex items-start gap-4 rounded-2xl border border-border/70 bg-background/60 p-5"
+    >
+      <span
+        className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold text-background"
+        style={{ backgroundColor: "var(--brand-orange)" }}
+        aria-hidden
+      >
+        i
+      </span>
+      <div>
+        <p className="font-mono-label text-muted-foreground">Heads up</p>
+        <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+          This journal is actively being built out. Some entries below are
+          placeholder drafts while I write the full articles. Subscribe to get
+          the real thing in your inbox as it ships.
+        </p>
+      </div>
+    </aside>
+  );
+}
+
+function FrameworkSection() {
+  return (
+    <section
+      id="framework"
+      className="mt-16 rounded-2xl border border-border/70 bg-background/60 p-8"
+    >
+      <p className="font-mono-label text-muted-foreground">04 / Framework</p>
+      <h2 className="font-display mt-2 text-3xl font-extrabold leading-tight text-foreground">
+        The ATQI{" "}
+        <span className="font-serif-italic" style={{ color: "var(--brand-orange)" }}>
+          Framework
+        </span>
+        <sup className="ml-1 text-base" style={{ color: "var(--brand-orange)" }}>™</sup>
+      </h2>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+        AT Quality Intelligence is a systems based operating model for embedding
+        AI driven quality into enterprise scale engineering. Built on
+        observability, adaptive execution, and delivery intelligence.
+      </p>
+      <figure className="mt-6 overflow-hidden rounded-xl border border-border/70 bg-background p-3">
+        <img
+          src={frameworkImg}
+          alt="AT Quality Intelligence Framework diagram showing GenAI Engineering, Predictive Intelligence, LLM Validation and Red Teaming, Continuous Evaluation and Feedback, AI Quality Observability, and Governance and Compliance."
+          className="h-auto w-full rounded-md"
+          loading="lazy"
+        />
+      </figure>
+      <div className="mt-6">
+        <a
+          href="https://alextnow.com/#framework"
+          className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
+        >
+          See the full framework on alextnow.com <span aria-hidden>↗</span>
+        </a>
+      </div>
     </section>
   );
 }
