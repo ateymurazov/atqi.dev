@@ -8,10 +8,10 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "atqi.dev — Notes on building better software" },
-      { name: "description", content: "Short essays on engineering quality, AI-driven delivery, and scaling software organizations — written by Aleksandr Teymurazov." },
-      { property: "og:title", content: "atqi.dev — Notes on building better software" },
-      { property: "og:description", content: "Short essays on engineering quality, AI-driven delivery, and scaling software organizations." },
+      { title: "atqi.dev | Notes on building better software" },
+      { name: "description", content: "Articles by Aleksandr Teymurazov on engineering quality, AI driven delivery, and scaling software teams." },
+      { property: "og:title", content: "atqi.dev | Notes on building better software" },
+      { property: "og:description", content: "Articles by Aleksandr Teymurazov on engineering quality, AI driven delivery, and scaling software teams." },
       { property: "og:url", content: "https://atqi.dev/" },
     ],
     links: [{ rel: "canonical", href: "https://atqi.dev/" }],
@@ -38,15 +38,16 @@ function Hero() {
         </span>
       </div>
       <h1 className="font-display mt-6 text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-[0.95] text-foreground">
-        Short essays on building{" "}
+        Articles on building{" "}
         <span className="font-serif-italic" style={{ color: "var(--brand-orange)" }}>
           better software
         </span>
         <span className="text-foreground">.</span>
       </h1>
       <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-        Engineering quality, AI-driven delivery, and scaling software orgs — written from
-        fifteen years in the trenches. New story every couple of weeks.
+        My take on engineering quality, AI driven delivery, and what it takes to scale
+        a software team. Written from fifteen years of doing the work. New article
+        every couple of weeks.
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <Link
@@ -111,15 +112,15 @@ function SubscribeSection() {
     <section className="mt-16 rounded-2xl border border-border/70 bg-background/60 p-8">
       <p className="font-mono-label text-muted-foreground">The Newsletter</p>
       <h2 className="font-display mt-2 text-2xl font-extrabold text-foreground">
-        Engineering stories,{" "}
+        Engineering stories{" "}
         <span className="font-serif-italic" style={{ color: "var(--brand-orange)" }}>
-          straight to your inbox
+          in your inbox
         </span>
         .
       </h2>
       <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
-        One short, useful note every couple of weeks. Real situations from leading
-        engineering teams — no fluff.
+        One short, useful article every couple of weeks. Real situations from leading
+        engineering teams, written from my own experience.
       </p>
       <div className="mt-5">
         <SubscribeForm source="home_inline" />
