@@ -9,10 +9,10 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "atqi.dev | Notes on building better software" },
-      { name: "description", content: "Articles by Aleksandr Teymurazov on engineering quality, AI driven delivery, and scaling software teams." },
-      { property: "og:title", content: "atqi.dev | Notes on building better software" },
-      { property: "og:description", content: "Articles by Aleksandr Teymurazov on engineering quality, AI driven delivery, and scaling software teams." },
+      { title: "INSIGHTS / 2026 — atqi.dev" },
+      { name: "description", content: "Engineering insights by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. New articles every couple of weeks." },
+      { property: "og:title", content: "INSIGHTS / 2026 — atqi.dev" },
+      { property: "og:description", content: "Engineering insights by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. New articles every couple of weeks." },
       { property: "og:url", content: "https://atqi.dev/" },
     ],
     links: [{ rel: "canonical", href: "https://atqi.dev/" }],
