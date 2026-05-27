@@ -6,13 +6,13 @@ export const Route = createFileRoute("/subscribe")({
   component: SubscribePage,
   head: () => ({
     meta: [
-      { title: "Subscribe | atqi.dev" },
+      { title: "Subscribe — INSIGHTS / 2026" },
       {
         name: "description",
         content:
-          "Subscribe to atqi.dev for short engineering articles by Aleksandr Teymurazov, every couple of weeks.",
+          "Subscribe to INSIGHTS / 2026 for short engineering articles by Aleksandr Teymurazov, every couple of weeks.",
       },
-      { property: "og:title", content: "Subscribe | atqi.dev" },
+      { property: "og:title", content: "Subscribe — INSIGHTS / 2026" },
       {
         property: "og:description",
         content: "Engineering articles from my own experience. One short read every couple of weeks.",
