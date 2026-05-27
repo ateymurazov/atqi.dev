@@ -20,8 +20,8 @@ function TopBar() {
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-foreground text-background">
           <span className="font-display text-base font-extrabold tracking-tight">AT</span>
         </div>
-        <span className="font-mono-label text-muted-foreground">
-          Aleksandr Teymurazov · Journal / 2026
+        <span className="font-mono-label text-muted-foreground uppercase">
+          ALEKSANDR TEYMURAZOV · INSIGHTS / 2026
         </span>
       </Link>
       <nav className="flex items-center gap-5">
