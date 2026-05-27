@@ -21,7 +21,7 @@ function TopBar() {
           <span className="font-display text-base font-extrabold tracking-tight">AT</span>
         </div>
         <span className="font-mono-label text-muted-foreground">
-          Aleksandr Teymurazov · Journal / 2026
+          ALEKSANDR TEYMURAZOV · INSIGHTS / 2026
         </span>
       </Link>
       <nav className="flex items-center gap-5">
