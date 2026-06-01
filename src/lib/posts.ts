@@ -63,6 +63,24 @@ export const posts: Post[] = [
       "The full arc, including what we kept, what we killed, and the org chart we landed on, is on my main site.",
     ],
   },
+  {
+    slug: "predicting-flaky-tests-with-random-forest",
+    num: "04",
+    category: "AI & Delivery",
+    title: "Predicting flaky tests with Random Forest.",
+    dek: "How I used a Random Forest classifier on test metadata to quarantine flaky tests before they ever ran, and earned developer trust back.",
+    publishedISO: "2026-05-24",
+    publishedLabel: "May 2026",
+    readMinutes: 5,
+    parentAnchor: "framework",
+    body: [
+      "Nothing kills velocity faster than a test suite nobody trusts. Our automation suite had reached that breaking point. Flaky tests were everywhere. False positives, inconsistent runs, wasted CI/CD cycles, and a build pipeline that was visibly slowing down. Developers stopped trusting automation results altogether, which is the worst failure mode a QA org can land in.",
+      "The instinct in most orgs is to write more tests, or to add another gate. I went the other direction. I built an AI based system to predict and isolate flaky tests using a Random Forest classifier, trained on test metadata: execution time, file change frequency, historical pass and fail variance, and a handful of other signals that quietly encode whether a test is actually stable.",
+      "The pipeline is straightforward. Engineer features from test history. Label flaky tests using historical pass and fail patterns. Train the Random Forest classifier on that labeled set. Then, on every PR, flag the tests the model predicts will be flaky and route them to a quarantine tier. CI runs the stable, high signal tests on the hot path. The quarantined ones still run, just off the critical path where they cannot block a merge.",
+      "Within weeks the impact was clear. Automated tests on every PR ran in under 20 minutes. False positives dropped by roughly 80 percent. CI/CD got about 25 percent faster because we stopped paying for retries on tests that were never going to be deterministic. Most importantly, developer confidence in automation came back. Automation became a reliable validation system again, not a noise generator.",
+      "This was not just a tech win, it was a trust win. The lesson I keep coming back to is that AI can meaningfully improve the speed and reliability of QA processes, but only when you point it at a real systemic problem instead of bolting it onto the end of the pipeline. The full write up, with the feature set and the CI wiring, lives on my main site.",
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
