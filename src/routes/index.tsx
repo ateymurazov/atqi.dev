@@ -95,6 +95,18 @@ function PostsSection() {
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   {post.dek}
                 </p>
+                {post.tags.length > 0 && (
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {post.tags.slice(0, 4).map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-border/70 px-2 py-0.5 font-mono-label text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
               <span
                 className="mt-2 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-foreground/80 text-foreground transition-all group-hover:bg-foreground group-hover:text-background"
