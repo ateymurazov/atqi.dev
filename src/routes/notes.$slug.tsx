@@ -19,12 +19,15 @@ export const Route = createFileRoute("/notes/$slug")({
       meta: [
         { title: `${post.title} | atqi.dev` },
         { name: "description", content: post.dek },
+        { name: "keywords", content: post.tags.join(", ") },
         { property: "og:type", content: "article" },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.dek },
         { property: "og:url", content: url },
         { property: "article:author", content: "Aleksandr Teymurazov" },
         { property: "article:published_time", content: post.publishedISO },
+        { property: "article:section", content: post.category },
+        ...post.tags.map((tag) => ({ property: "article:tag", content: tag })),
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -37,6 +40,8 @@ export const Route = createFileRoute("/notes/$slug")({
             description: post.dek,
             datePublished: post.publishedISO,
             mainEntityOfPage: url,
+            articleSection: post.category,
+            keywords: post.tags,
             author: {
               "@type": "Person",
               name: "Aleksandr Teymurazov",
@@ -92,9 +97,23 @@ function NotePage() {
 
         <div className="mt-10 space-y-5 text-base leading-relaxed text-foreground/90">
           {post.body.map((para, i) => (
-            <p key={i}>{para}</p>
+            <p key={i}>{renderBody(para)}</p>
           ))}
         </div>
+
+        {post.tags.length > 0 && (
+          <div className="mt-10 flex flex-wrap items-center gap-2">
+            <span className="font-mono-label mr-1 text-muted-foreground">Tags</span>
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-border/70 bg-background/60 px-3 py-1 font-mono-label text-muted-foreground"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         <aside className="mt-12 rounded-2xl border border-border/70 bg-background/60 p-6">
           <p className="font-mono-label text-muted-foreground">Keep reading</p>
