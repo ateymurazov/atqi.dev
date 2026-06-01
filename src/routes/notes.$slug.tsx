@@ -71,6 +71,7 @@ function NotePage() {
   const { post } = Route.useLoaderData() as { post: Post };
   const idx = posts.findIndex((p) => p.slug === post.slug);
   const next = posts[(idx + 1) % posts.length];
+  const related = posts.filter((p) => p.slug !== post.slug);
 
   return (
     <SiteShell>
@@ -115,6 +116,40 @@ function NotePage() {
             Read the full piece on alextnow.com <span aria-hidden>↗</span>
           </a>
         </aside>
+
+        {related.length > 0 && (
+          <section className="mt-12">
+            <p className="font-mono-label text-muted-foreground">Related notes</p>
+            <h2 className="font-display mt-2 text-xl font-extrabold text-foreground">
+              More from INSIGHTS / 2026
+            </h2>
+            <ul className="mt-5 space-y-4">
+              {related.map((r) => (
+                <li
+                  key={r.slug}
+                  className="rounded-2xl border border-border/70 bg-background/60 p-5"
+                >
+                  <Link
+                    to="/notes/$slug"
+                    params={{ slug: r.slug }}
+                    className="group block"
+                  >
+                    <p
+                      className="font-mono-label"
+                      style={{ color: "var(--brand-orange)" }}
+                    >
+                      {r.num} · {r.category} · {r.publishedLabel}
+                    </p>
+                    <h3 className="font-display mt-2 text-lg font-extrabold text-foreground group-hover:text-[color:var(--brand-orange)]">
+                      {r.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{r.dek}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <section className="mt-12 rounded-2xl border border-border/70 bg-background/60 p-6">
           <p className="font-mono-label text-muted-foreground">Get the next one</p>
