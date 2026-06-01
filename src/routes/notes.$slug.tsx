@@ -1,7 +1,34 @@
+import { Fragment, type ReactNode } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteShell } from "@/components/SiteShell";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { getPost, parentLink, posts, ALEXTNOW_URL, type Post } from "@/lib/posts";
+
+const INLINE_LINK_RE = /\[([^\]]+)\]\(([a-z0-9-]+)\)/g;
+
+function renderBody(text: string): ReactNode {
+  const nodes: ReactNode[] = [];
+  let last = 0;
+  let match: RegExpExecArray | null;
+  INLINE_LINK_RE.lastIndex = 0;
+  while ((match = INLINE_LINK_RE.exec(text)) !== null) {
+    const [full, label, slug] = match;
+    if (match.index > last) nodes.push(text.slice(last, match.index));
+    nodes.push(
+      <Link
+        key={`${slug}-${match.index}`}
+        to="/notes/$slug"
+        params={{ slug }}
+        className="font-medium text-foreground underline decoration-2 underline-offset-4 hover:text-[color:var(--brand-orange)]"
+      >
+        {label}
+      </Link>,
+    );
+    last = match.index + full.length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes.map((n, i) => <Fragment key={i}>{n}</Fragment>);
+}
 
 export const Route = createFileRoute("/notes/$slug")({
   loader: ({ params }) => {
