@@ -97,6 +97,34 @@ export const posts: Post[] = [
       "This was not just a tech win, it was a trust win. It pairs naturally with [letting AI write the tests humans never would](ai-writes-the-tests-humans-wont): one side generates coverage broadly, the other quietly evicts the unstable tests before they erode confidence. The full write up, with the feature set and the CI wiring, lives on my main site.",
     ],
   },
+  {
+    slug: "unpopular-opinion-that-might-save-your-career",
+    num: "05",
+    category: "Leadership",
+    tags: [
+      "Engineering Leadership",
+      "Quality Engineering",
+      "AI Testing",
+      "LLM Testing",
+      "Career",
+      "Promptfoo",
+      "Red Teaming",
+    ],
+    title: "Unpopular opinion that might save your career.",
+    dek: "If you are a Senior Manager, Director, or VP in Quality Engineering and you are not still hands-on and technical, you are already obsolete.",
+    publishedISO: "2026-05-31",
+    publishedLabel: "May 2026",
+    readMinutes: 4,
+    parentAnchor: "principles",
+    body: [
+      "Unpopular opinion that might save your career: if you are a Senior Manager, Director, or VP in Quality Engineering and you are not still hands-on and technical, you are already obsolete.",
+      "The market is ruthless right now. Titles do not save you. Fancy decks do not save you. If you cannot roll up your sleeves and build alongside your teams, your next job search will be a brutal wake-up call. Throughout my career I have made it a priority to keep leveling up, not just to stay current with the latest tech but to be the kind of leader who can jump in, help the team cross the finish line, or troubleshoot the issues no one else can crack. That mindset has carried me through every stage of my career.",
+      "But now the game has changed. Testing AI and LLMs is a completely different beast. Traditional testing approaches do not prepare you for the way these systems fail, the risks they expose, or the tools required to validate them. And the reality is almost nobody is teaching this yet.",
+      "This is where the industry is heading. More and more applications will embed AI or leverage LLMs, and the organizations that can test them effectively will have a huge advantage. So I invested six weeks into a Testing AI and LLMs course, not theory, but true hands-on skills learned by practicing: using Promptfoo in day-to-day testing, running red teaming attacks and knowing when, how, and why to adapt them to project maturity, and turning AI buzzwords into applied engineering skills.",
+      "This is the same instinct behind [letting AI write the tests humans never would](ai-writes-the-tests-humans-wont) and [predicting flaky tests with Random Forest](predicting-flaky-tests-with-random-forest): the leaders who stay close to the tools are the ones who get to shape what quality means in the AI era. It also ties back to the deeper belief that [quality is a systems problem, not a testing problem](quality-is-a-systems-problem) — and you cannot redesign a system you no longer understand.",
+      "Many QA leaders drift too far from the tech. Then they wonder why the market passes them by. Do not be one of them.",
+    ],
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
