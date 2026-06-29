@@ -1,0 +1,20 @@
+# ATQI Insights
+
+> Short engineering notes from Aleksandr Teymurazov on quality systems, AI-driven testing, and engineering leadership. Companion to alextnow.com.
+
+## Pages
+
+- [Home](/): Index of all notes from INSIGHTS / 2026.
+- [Subscribe](/subscribe): Get new engineering notes by email.
+
+## Notes
+
+- [Quality is a systems problem, not testing](/notes/quality-is-a-systems-problem): Why throwing more QA at a broken pipeline never works.
+- [Letting AI write the tests humans never would](/notes/ai-writes-the-tests-humans-wont): Embedding AI-generated regression coverage into CI without the noise.
+- [Unifying engineering after a merger](/notes/unifying-engineering-after-a-merger): Five teams, one delivery cadence after an acquisition.
+- [Predicting flaky tests with Random Forest](/notes/predicting-flaky-tests-with-random-forest): An ML classifier on test metadata that quarantines flaky tests before they run.
+- [Unpopular opinion that might save your career](/notes/unpopular-opinion-that-might-save-your-career): QE leaders who lose the tools lose the market.
+
+## Optional
+
+- [alextnow.com](https://alextnow.com): Parent site with the full framework and work history.
