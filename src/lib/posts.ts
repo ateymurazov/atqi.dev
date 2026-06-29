@@ -18,7 +18,7 @@ export const posts: Post[] = [
     num: "01",
     category: "Quality Systems",
     tags: ["Quality Engineering", "Systems Thinking", "CI/CD", "Defect Prevention"],
-    title: "Quality is a systems problem, not a testing problem.",
+    title: "Quality is a systems problem, not testing.",
     dek: "Why throwing more QA at a broken pipeline never works, and what I do instead.",
     publishedISO: "2026-04-12",
     publishedLabel: "April 2026",
