@@ -81,8 +81,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: "INSIGHTS / 2026 — Aleksandr Teymurazov" },
       { name: "twitter:description", content: "Engineering insights by Aleksandr Teymurazov on quality, AI driven delivery, and scaling software teams. Companion journal to alextnow.com." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Vlc2BepNpVXkZA9Ha7mAhgT3Bk03/social-images/social-1779824047681-AT_monogram.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Vlc2BepNpVXkZA9Ha7mAhgT3Bk03/social-images/social-1779824047681-AT_monogram.webp" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Vlc2BepNpVXkZA9Ha7mAhgT3Bk03/social-images/social-1782801556045-ATQI_card.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/Vlc2BepNpVXkZA9Ha7mAhgT3Bk03/social-images/social-1782801556045-ATQI_card.webp" },
     ],
     links: [
       {
